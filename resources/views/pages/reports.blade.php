@@ -47,7 +47,7 @@
         <tbody>
         @foreach ($reports as $key => $report)
         <tr>
-			<td align="center"><input type="checkbox" name="del_ids[]" class="selectbox" val="{{$key}}"></td>
+			<td align="center"><input type="checkbox" name="del_ids[]" value="{{$key}}"></td>
             <td>{{$report['category']}}</td>
 			<td>{{$report['address']}}</td>
 
