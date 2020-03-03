@@ -122,7 +122,8 @@ class FirebaseController extends Controller
         exit();
     }
 
-    public function static_array_to_csv( $filename = "export.csv", $delimiter=";" ){
+    public function static_array_to_csv( $filename = 'wefix_', $delimiter=";" ){
+        $filename = $filename.date('m-d-Y_H-i').'.csv';
         $factory = new Factory();
         $database = $factory->createDatabase();
         $reference = $database->getReference('pollution-tracker/reports');
@@ -137,7 +138,7 @@ class FirebaseController extends Controller
         $handle = fopen( 'php://output', 'w' );
 
         // setting up column headers
-        $headers = [ 'Polution Type', 'Address', 'Location', 'Extent', 'Source', 'Posted At', 'Audio Url', 'Image Url'];
+        $headers = [ 'Pollution Type', 'Address', 'Location', 'Extent', 'Source', 'Posted At', 'Audio Url', 'Image Url'];
         fputcsv( $handle, $headers );
 
         foreach ($all_reports as $report) 
