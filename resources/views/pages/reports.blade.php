@@ -3,6 +3,7 @@
 @section('title', 'WeFIX Reports')
 
 @section('content_header')
+	@include('flash-message')
     <h1 class="m-0 text-dark">Reports</h1>
 @stop
 
@@ -28,11 +29,12 @@
     </div>
     <!-- /.box-header -->
     <div class="card-body">
-	<form action="{{ route('reports.delete') }}" method="POST"> @csrf
+	<form class="delete" action="{{ route('reports.delete') }}" method="POST"> @csrf
       <table id="example1" class="table table-bordered table-striped">
         <thead>
         <tr>
-			<th><button class="btn" title="Delete rows" type="submit"><i class="fa fa-trash"></i></button></th>
+			<th><button class="btn" title="Delete rows" type="submit">
+				<i class="fa fa-trash"></i></button></th>
             <th style="width:11.5%">Pollution type</th>
 			<th>Address</th>
 			<th style="width:11.5%">Latitude-Longitude</th>
@@ -82,6 +84,8 @@
 		
 		<tfoot>
 			<tr>
+				<th><button class="btn" title="Delete rows" type="submit">
+					<i class="fa fa-trash"></i></button></th>
 				<th>Pollution type</th>
 				<th>Address</th>
 				<th>Latitude-Longitude</th>
@@ -111,6 +115,11 @@
 
 @section('js')
 	<!-- page script -->
+	<script>
+		$(".delete").on("submit", function(){
+			return confirm("Do you really want to delete the selected rows?");
+		});
+	</script>
 	<script>
 		$(function () {
 			//if ( $( "[name='anchor']" ).length ) {

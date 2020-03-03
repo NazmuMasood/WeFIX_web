@@ -174,15 +174,19 @@ class FirebaseController extends Controller
     public function delete(Request $request){
         if ( $request->has('del_ids')  ) {
             $del_ids = $request -> input('del_ids');
-            $tobeprinted = "";
+            $factory = new Factory();
+            $database = $factory->createDatabase();
             foreach($del_ids as $del_id){
-                $tobeprinted = $tobeprinted ." ". $del_id;
+                $reference = $database->getReference('pollution-tracker/reports');
+                //Delete that report
+                $tempRef = $database->getReference('pollution-tracker/reports')
+                                            ->getChild($del_id)->orderByChild($del_id)->getReference();
+                $tempRef->remove();
             }
-            printf($tobeprinted);
-            //var_dump($del_ids);
+            return redirect('/reports')->with('success', 'Delete successful');
         }
         else{ 
-            printf("nothing selected");
+            return redirect('/reports')->with('failure', 'No row selected');
         }
     }
 }

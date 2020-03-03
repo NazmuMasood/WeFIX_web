@@ -184,7 +184,7 @@ return [
         // ],
         [
             'text'        => 'Dashboard',
-            'url'         => '/home',
+            'url'         => '/dashboard',
             'icon'        => 'fa fa-anchor',
           //  'label'       => 4,
           //  'label_color' => 'success',

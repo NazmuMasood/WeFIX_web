@@ -15,11 +15,11 @@
 //     return view('auth.login');
 // });
 
-Route::get('/', 'HomeController@landing');
-Route::get('/home', 'HomeController@index')->middleware('auth');
+Route::get('/', 'DashboardController@landing');
+Route::get('/dashboard', 'DashboardController@index')->middleware('auth');
 Route::get('/reports', 'FirebaseController@index')->middleware('auth');
 Route::get('/download', 'FirebaseController@static_array_to_csv')->middleware('auth');
-Route::get('/profile', 'HomeController@profile')->middleware('auth');
+Route::get('/profile', 'DashboardController@profile')->middleware('auth');
 Route::post('/delete', 'FirebaseController@delete')->name('reports.delete')->middleware('auth');
 
 //adminLTE routes

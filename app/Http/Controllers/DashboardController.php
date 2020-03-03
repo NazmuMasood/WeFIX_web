@@ -7,7 +7,7 @@ use Kreait\Firebase\Factory;
 use Session;
 use Auth;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
     public function index(){
         if(!Session::has('reportsCount')){
@@ -27,7 +27,7 @@ class HomeController extends Controller
             session(['reportsCount' => $counter]);
         }
 
-        return view('home');
+        return view('pages.dashboard');
     }
 
     public function profile(){
@@ -40,6 +40,6 @@ class HomeController extends Controller
     }
 
     public function landing(){
-        return view('landing');
+        return view('pages.landing');
     }
 }
