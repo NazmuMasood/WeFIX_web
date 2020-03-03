@@ -29,11 +29,11 @@
     </div>
     <!-- /.box-header -->
     <div class="card-body">
-	<form class="delete" action="{{ route('reports.delete') }}" method="POST"> @csrf
+	<form class="form" action="{{ route('reports.delete') }}" method="POST"> @csrf
       <table id="example1" class="table table-bordered table-striped">
         <thead>
         <tr>
-			<th><button class="btn" title="Delete rows" type="submit">
+			<th><button class="btn" title="Delete rows" type="submit" >
 				<i class="fa fa-trash"></i></button></th>
             <th style="width:11.5%">Pollution type</th>
 			<th>Address</th>
@@ -115,9 +115,33 @@
 
 @section('js')
 	<!-- page script -->
-	<script>
-		$(".delete").on("submit", function(){
-			return confirm("Do you really want to delete the selected rows?");
+	<script>	
+		var table = $('#example1').DataTable({
+		// ... skipped ...
+		});
+
+		$('form').on('submit', function(e){
+			if(!confirm("Do you really want to delete the selected rows?")) {
+				return false;
+			}
+			var $form = $(this);
+
+			// Iterate over all checkboxes in the table
+			table.$('input[type="checkbox"]').each(function(){
+				// If checkbox doesn't exist in DOM
+				if(!$.contains(document, this)){
+					// If checkbox is checked
+					if(this.checked){
+						// Create a hidden element 
+						$form.append(
+						$('<input>')
+							.attr('type', 'hidden')
+							.attr('name', this.name)
+							.val(this.value)
+						);
+					}
+				} 
+			});          
 		});
 	</script>
 	<script>

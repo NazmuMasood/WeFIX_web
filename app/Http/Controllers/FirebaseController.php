@@ -176,13 +176,16 @@ class FirebaseController extends Controller
             $del_ids = $request -> input('del_ids');
             $factory = new Factory();
             $database = $factory->createDatabase();
+            //$tobeprinted = "";
             foreach($del_ids as $del_id){
                 $reference = $database->getReference('pollution-tracker/reports');
                 //Delete that report
                 $tempRef = $database->getReference('pollution-tracker/reports')
                                             ->getChild($del_id)->orderByChild($del_id)->getReference();
                 $tempRef->remove();
+                //$tobeprinted = $tobeprinted ." ". $del_id;
             }
+            //printf($tobeprinted);
             return redirect('/reports')->with('success', 'Delete successful');
         }
         else{ 
