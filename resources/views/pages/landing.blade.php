@@ -684,17 +684,17 @@
 
     <div class="container py-4">
       <div class="copyright">
-        &copy; {{ date('Y') }} <strong><span>WeFIX Inc</span></strong>. All rights reserved 
+        &copy; {{ date('Y') }} <strong><span>WeFIX Inc</span></strong>. All rights reserved. 
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
-        Theme by <a href="https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/" target="_blank">Ninestars</a> | 
-        Admin panel by <a href="https://adminlte.io/" target="_blank">AdminLTE</a> | 
         Made with <span style="color: #e25555;">&#9829;</span> by
-              <a href="https://github.com/NazmuMasood" target="_blank">NazmuMasood</a>
+        <a href="https://github.com/NazmuMasood" target="_blank">NazmuMasood</a> | 
+        Theme by <a href="https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/" target="_blank">Ninestars</a> | 
+        Admin panel by <a href="https://adminlte.io/" target="_blank">AdminLTE</a>.
       </div>
     </div>
   </footer><!-- End Footer -->
