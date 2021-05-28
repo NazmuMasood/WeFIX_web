@@ -92,7 +92,7 @@
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
           <h1>Striving to make the world a better place</h1>
-          <h2>We are team of like-minded people with a common goal</h2>
+          <h2>We are team of like-minded people with a common goal - A Safe Future</h2>
           <a href="#about" class="btn-get-started scrollto">Get Started</a>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
@@ -116,18 +116,25 @@
           <div class="col-lg-6 pt-5 pt-lg-0">
             <h3 data-aos="fade-up">We identify problems & systematically approach to solve them</h3>
             <p data-aos="fade-up" data-aos-delay="100">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              {{-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit --}}
+              Join countless others in addressing and identifying environmental problems and contribute to the grand beginning towards a positive change and safe environment 
             </p>
             <div class="row">
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <i class="bx bx-receipt"></i>
                 <h4>Identify Problems</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                <p>
+                  {{-- Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip --}}
+                  We provide tools to proactively identify environmental challenges that have real-life impacts
+                </p>
               </div>
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <i class="bx bx-cube-alt"></i>
                 <h4>Systematically solve them</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                <p>
+                  {{-- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt --}}
+                  Suggestive and comprehensive reports are geared towards a systematic resolve 
+                </p>
               </div>
             </div>
           </div>
@@ -150,7 +157,10 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
               <h4 class="title"><a href="">Pollution Tracker</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate</p>
+              <p class="description">
+                {{-- Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate --}}
+                An intuitive tool to create, manage and track pollution reports seamlessly
+              </p>
             </div>
           </div>
 
@@ -158,7 +168,10 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
               <h4 class="title"><a href="">Comprehesive Report</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
+              <p class="description">
+                {{-- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla --}}
+                View comprehesive analysis of pollution data and see trends with graphs 
+              </p>
             </div>
           </div>
 
@@ -166,7 +179,10 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
               <h4 class="title"><a href="">Realtime Data</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
+              <p class="description">
+                {{-- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim --}}
+                Real time updates and reportings illuminates latest developments   
+              </p>
             </div>
           </div>
 
@@ -174,7 +190,10 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4 class="title"><a href="">Plausible Solutions</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+              <p class="description">
+                {{-- At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum --}}
+                A suggestive and crytical guide to address, identify and bring about positive changes
+              </p>
             </div>
           </div>
 
@@ -602,7 +621,7 @@
           <div class="col-lg-6">
             <h4>Join Our Newsletter</h4>
             <p>Venture through this amazing journey with us</p>
-            <form action="" method="post">
+            <form action="/" role="form" class="newsletter-form" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
           </div>
@@ -665,14 +684,17 @@
 
     <div class="container py-4">
       <div class="copyright">
-        &copy; 2020 <strong><span>WeFIX Inc</span></strong>. All rights reserved 
+        &copy; {{ date('Y') }} <strong><span>WeFIX Inc</span></strong>. All rights reserved 
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
-        {{-- Designed by <a href="https://bootstrapmade.com/">WeFIX</a> --}}
+        Theme by <a href="https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/" target="_blank">Ninestars</a> | 
+        Admin panel by <a href="https://adminlte.io/" target="_blank">AdminLTE</a> | 
+        Made with <span style="color: #e25555;">&#9829;</span> by
+              <a href="https://github.com/NazmuMasood" target="_blank">NazmuMasood</a>
       </div>
     </div>
   </footer><!-- End Footer -->

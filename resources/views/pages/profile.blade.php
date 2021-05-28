@@ -8,7 +8,7 @@
 
 @section('content')
     
-    <div class="card" style="width: 15rem;">
+    <div class="card" style="width: 22rem;">
         <span class="border border-info">
             <img class="card-img-top" src="vendor/adminlte/dist/img/profile-icon.svg" alt="Profile picture" 
             height="190" >
@@ -24,6 +24,6 @@
 @section('footer')
 	<!-- FOOTER -->
 	<footer class="container">
-		<p>&copy; 2020 WeFIX &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+		<p>&copy; {{ date('Y') }} WeFIX &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
 	</footer>
 @stop

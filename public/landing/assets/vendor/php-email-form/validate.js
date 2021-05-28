@@ -95,6 +95,13 @@ jQuery(document).ready(function($) {
     var this_form = $(this);
     var action = $(this).attr('action');
 
+    //My edit
+    if( action ) {
+      this_form.find("input:not(input[type=submit]), textarea").val('');
+      this_form.find('.sent-message').slideDown();
+      return false;
+    }
+
     if( ! action ) {
       this_form.find('.loading').slideUp();
       this_form.find('.error-message').slideDown().html('The form action property is not set!');
@@ -123,4 +130,16 @@ jQuery(document).ready(function($) {
     return false;
   });
 
+  //Newsletter
+  $('form.newsletter-form').submit(function() {
+    var this_form = $(this);
+    var action = $(this).attr('action');
+
+    //My edit
+    if( action ) {
+      // this_form.find("input:not(input[type=submit]), textarea").val('');
+      location.reload();
+      return false;
+    }
+  });
 });

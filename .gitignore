@@ -11,3 +11,4 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 wefix.zip
+# "C:\xampp\php72\php.exe" artisan serve --host=127.0.0.1 --port=8500
