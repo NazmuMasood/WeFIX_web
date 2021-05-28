@@ -41,7 +41,7 @@
             <div class="card-body login-card-body">
                 <p class="login-box-msg">
                     {{-- {{ __('adminlte::adminlte.login_message') }} --}}
-                    Login to view pollution reports mama
+                    Login to view pollution reports
                 </p>
                 <form action="{{ $login_url }}" method="post">
                     {{ csrf_field() }}
